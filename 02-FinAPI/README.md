@@ -56,7 +56,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
     $ git clone https://github.com/jcobarreto/ignite-nodejs.git
 
     # 2º Entrar no diretório
-    $ cd ignite-nodejs/02-FinApi
+    $ cd ignite-nodejs/02-FinAPI
 
     # 3º Instalar as dependências
     $ yarn
