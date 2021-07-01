@@ -1,16 +1,16 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
-@Entity("categories")
-class Category {
+@Entity("cars_image")
+class CarImage {
   @PrimaryColumn()
-  id?: string;
+  id: string;
 
   @Column()
-  name: string;
+  car_id: string;
 
   @Column()
-  description: string;
+  image_name: string;
 
   @CreateDateColumn()
   created_at: Date;
@@ -21,4 +21,5 @@ class Category {
     }
   }
 }
-export { Category };
+
+export { CarImage };
