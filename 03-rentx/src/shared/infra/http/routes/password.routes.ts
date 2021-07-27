@@ -6,9 +6,9 @@ import { SendForgotPasswordMailController } from "@modules/accounts/useCases/sen
 const passwordRoutes = Router();
 
 const sendForgotPasswordMailController = new SendForgotPasswordMailController();
-const resetPasswordUserController = new ResetPasswordUserController();
+const resetPasswordController = new ResetPasswordUserController();
 
 passwordRoutes.post("/forgot", sendForgotPasswordMailController.handle);
-passwordRoutes.post("/reset", resetPasswordUserController.handle);
+passwordRoutes.post("/reset", resetPasswordController.handle);
 
 export { passwordRoutes };
