@@ -73,8 +73,6 @@ class AuthenticateUserUseCase {
       expires_date: refresh_token_expires_date,
     });
 
-    console.log(teste);
-
     const tokenReturn: IResponse = {
       token,
       user: {
@@ -83,8 +81,6 @@ class AuthenticateUserUseCase {
       },
       refresh_token,
     };
-
-    console.log(tokenReturn);
 
     return tokenReturn;
   }
