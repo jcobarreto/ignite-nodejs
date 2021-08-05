@@ -3,7 +3,7 @@ version: "3.7"
 services: 
   database:
     image: postgres
-    container_name: database_ignite
+    container_name: postgres_ignite
     restart: always
     ports: 
       - 5432:5432
@@ -12,7 +12,15 @@ services:
       - POSTGRES_PASSWORD=ignite
       - POSTGRES_DB=rentx
     volumes: 
-      - pgdata:/data/postgres    
+      - pgdata:/data/postgres
+
+  redis:
+    image: redis:alpine
+    container_name: redis_ignite
+    restart: always
+    ports: 
+      - 6379:6379
+
   app:
     build: .
     container_name: rentx
